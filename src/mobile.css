@@ -1,0 +1,56 @@
+.welcome-mobile{display:none}
+
+/* Phone layouts only. Desktop and tablet retain their existing presentation. */
+@media(max-width:767px){
+ .header{padding-top:20px;margin-bottom:20px;gap:8px}
+ .brand{min-width:0;gap:5px}
+ .brand-mascot{zoom:.44}
+ .wordmark{font-size:clamp(16px,4.4vw,20px);line-height:24px;gap:6px}
+ .brand-copy p{font-size:10px;line-height:16px}
+ .consult{font-size:11px;padding:12px 10px;border-radius:14px;flex:none}
+ .progress-row{gap:12px;margin-bottom:16px}
+ .progress-row nav{gap:8px}
+ .step{flex:1;min-width:0;flex-direction:column;font-size:11px;line-height:16px;gap:6px;white-space:normal;text-align:center}
+ .step>span{width:32px;height:32px;flex:none}
+ .step>span img{width:24px;height:24px}
+ .duration{font-size:12px;gap:6px;line-height:20px}
+ .duration img{width:18px;height:18px;transform:none}
+ .check-in{grid-template-columns:minmax(0,1fr)}
+ .welcome{padding:0;min-width:0}
+ .welcome-inner{display:none}
+ .welcome-mobile{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 18px}
+ .welcome-mobile p{font-size:13px;line-height:20px;font-weight:500}
+ .welcome-mobile img{display:block;width:44px;height:auto;flex:none}
+ .welcome-mobile-initial{padding:14px 18px}
+ .welcome-mobile-initial img{width:72px}
+ .welcome-mobile h2{font-size:16px;line-height:24px;font-weight:400}
+ .welcome-mobile h2 span,.welcome-mobile h2 strong{display:block}
+ .welcome-mobile h2 strong{font-size:18px;font-weight:600}
+ .check-in-content{padding:24px 18px 28px}
+ .check-in-heading{gap:16px}
+ .check-in-heading h1{font-size:clamp(24px,6.8vw,30px);line-height:1.35;white-space:normal}
+ .check-in-heading .description{font-size:14px;line-height:1.6}
+ .needs-topline{gap:8px}
+ .needs-topline .eyebrow,.eyebrow{font-size:11px}
+ .back-button{font-size:14px;gap:6px}
+ .choices{margin-top:24px}
+ .support{flex-wrap:wrap;text-align:center}
+ .needs-content{gap:24px}
+ .chosen-feeling{font-size:14px;gap:16px}
+ .needs-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .need-card{height:auto;min-height:100px;padding:14px;display:flex;flex-direction:row;justify-content:space-between;gap:8px}
+ .need-copy{width:auto;min-width:0;flex:1;text-align:left;padding:0;gap:6px}
+ .need-title{font-size:16px;line-height:24px;white-space:normal}
+ .need-description{font-size:12px;line-height:18px;white-space:normal}
+ .need-art,.need-rest .need-art{zoom:1;width:72px;height:60px;position:relative;flex:none}
+ .need-art img{width:72px;height:60px;object-fit:contain}
+ .need-rest .need-art img{position:static;width:72px;height:60px;transform:none;object-fit:contain}
+ .needs-actions{gap:16px}
+ .needs-actions .support{font-size:12px}
+ .page[data-screen=restart] .progress-row{display:none}
+ .page[data-screen=restart] .welcome{display:none}
+ .restart-panel{min-height:0;height:auto;padding:8px 0 16px}
+ .restart-content{gap:24px}
+ main,.page:has(.think-screen) main,.page:has(.talk-screen) main{padding-bottom:32px}
+ footer>.shell{font-size:12px;gap:12px}
+}

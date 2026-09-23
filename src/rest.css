@@ -1,0 +1,23 @@
+/* The exported group preserves every original vector, without its opaque frame. */
+.need-rest .need-art{position:relative}
+.need-rest .need-art img{position:absolute;left:13.3158px;top:23.4211px;width:159px;height:113px;transform:scale(1.1710526);transform-origin:top left}
+.rest-screen .reassurance{border-radius:20px}
+.rest-content{display:flex;flex-direction:column;gap:40px;padding-bottom:48px}
+.rest-content .needs-topline{min-height:25px}
+.rest-panel{width:100%;height:373px;flex:none;display:flex;flex-direction:column;align-items:center;gap:10px;padding:39px 0 0;background:#e0f8f6;border:1px solid #c4c4c4;border-radius:8px;overflow:hidden}
+.rest-illustration{position:relative;width:187.025px;height:197.19px;flex:none}
+.rest-inner-circle{position:absolute;top:20.3288px;left:20.3287px}
+.rest-outer-circle{position:absolute;top:0;left:0}
+.rest-happy{position:absolute;top:23px;left:2px}
+.rest-copy{display:flex;flex-direction:column;gap:20px;text-align:center;width:100%;padding-inline:12px}
+.rest-copy h2{font-size:24px;line-height:30px;font-weight:500}
+.rest-copy p{font-size:16px;line-height:20px;font-weight:300}
+.rest-actions{display:flex;flex-direction:column;gap:25px;width:100%}
+.rest-clock{display:grid;place-items:center;width:18px;height:18px;flex:none}
+.rest-buttons{display:flex;flex-direction:column;gap:10px}
+.skip-button{width:100%;height:57px;border-radius:50px;background:white;color:#7c7c7c;font-size:16px;line-height:16px;font-weight:500}
+.skip-button:hover{background:#f6f6f6}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(min-width:1001px) and (max-width:1750px){.rest-content{gap:32px}.rest-content .description{font-size:clamp(13px,1.04vw,20px);line-height:24px}.rest-panel{height:350px;padding-top:28px}.rest-copy h2{font-size:22px}.rest-copy p{font-size:15px}.rest-actions .support{font-size:14px}}
+@media(max-width:1000px){.rest-content{gap:28px}.rest-content .description{font-size:16px;line-height:1.6}.rest-panel{height:auto;min-height:355px;padding:28px 16px 30px}.rest-copy h2{font-size:22px}.rest-copy p{font-size:15px}.rest-actions .support{font-size:13px}}
+@media(max-width:520px){.rest-content{gap:24px}.rest-content .description{font-size:14px}.rest-content h1{font-size:28px}.rest-panel{min-height:330px;padding:24px 10px}.rest-illustration{zoom:.9}.rest-copy{gap:16px;padding-inline:0}.rest-copy h2{font-size:20px;line-height:28px}.rest-copy p{font-size:13px;line-height:20px}.rest-actions .support{font-size:11px;gap:6px}.rest-actions{gap:22px}.skip-button{font-size:14px}}

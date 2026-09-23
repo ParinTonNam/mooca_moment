@@ -1,0 +1,132 @@
+/* Desktop uses the TH Style Guide type scale at normal browser zoom.
+   Keep phone/tablet rules independent of this compact, two-column layout. */
+@media (min-width: 1001px) {
+  .page {
+    --desktop-title: 36px;
+    --desktop-subtitle: 24px;
+    --desktop-body: 16px;
+    --desktop-caption: 14px;
+    min-height: 100vh;
+  }
+
+  .shell { width: calc(100% - 64px); max-width: 1200px; }
+  .header { padding-top: 24px; margin-bottom: 24px; }
+  .brand { gap: 12px; }
+  .brand-mascot { width: 64px; height: 50px; zoom: 1; }
+  .brand-copy { width: auto; }
+  .wordmark { font-size: 24px; line-height: 30px; gap: 12px; }
+  .brand-copy p { font-size: 14px; line-height: 24px; margin-top: 0; }
+  .consult {
+    width: auto; min-height: 48px; height: auto; padding: 16px 24px;
+    font-size: 16px; line-height: 16px;
+  }
+
+  .journey-progress { gap: 8px; margin-bottom: 20px; }
+  .journey-progress-label { font-size: 14px; line-height: 24px; }
+  .check-in,
+  .check-in.think-screen,
+  .check-in.talk-screen {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    min-height: 0;
+  }
+  .welcome { padding: 32px 24px; min-width: 0; }
+  .welcome-inner { width: 100%; max-width: 280px; gap: 24px; zoom: 1; }
+  .pill { font-size: 14px; line-height: 24px; padding: 8px 20px; }
+  .welcome-heading { font-size: var(--desktop-subtitle); line-height: 30px; font-weight: 500; }
+  .welcome-heading h2 { font-size: var(--desktop-subtitle); line-height: 30px; font-weight: 500; margin-top: 8px; }
+  .illustration { width: 260px; height: 284px; zoom: 1; flex: none; }
+  .outer-circle { width: 260px; height: 260px; }
+  .inner-circle { width: 204px; height: 204px; top: 28px; left: 28px; }
+  .hero-mascot { width: 242px; height: 188px; top: 36px; left: 9px; }
+  .brand-mascot > .mascot-art,
+  .hero-mascot > .mascot-art { width: 100%; height: 100%; transform: none; }
+  .brand-mascot .mascot-art > img,
+  .hero-mascot .mascot-art > img { width: 100%; height: 100%; object-fit: contain; transform: none; }
+  .reassurance {
+    top: 232px; left: 50%; transform: translateX(-50%);
+    padding: 12px 20px; font-size: 14px; line-height: 24px;
+  }
+  .welcome-note { font-size: 14px; line-height: 24px; }
+  .welcome-note span { margin-top: 0; }
+
+  .check-in-content { padding: 32px 40px; }
+  .check-in-heading { gap: 12px; }
+  .check-in-heading h1 {
+    font-size: var(--desktop-title); font-weight: 600; line-height: 40px;
+    white-space: normal; overflow-wrap: break-word;
+  }
+  .eyebrow { font-size: 14px; line-height: 24px; }
+  .check-in-content .description { font-size: var(--desktop-body); line-height: 20px; font-weight: 300; }
+  .choices { margin-top: 20px; gap: 16px; }
+  .feelings { gap: 12px; }
+  .feeling { height: 140px; padding-top: 20px; gap: 16px; }
+  .feeling > span:first-child { font-size: 16px; line-height: 20px; }
+  .face-art { height: 84px; flex: none; }
+  .face-background { width: 120%; height: auto; }
+  .expression,
+  .feeling-1 .expression,
+  .feeling-3 .expression { top: 24px; transform: translateX(-50%) scale(.7); transform-origin: top center; }
+  .support { font-size: 14px; line-height: 24px; gap: 8px; flex-wrap: wrap; text-align: center; }
+  .continue { min-height: 48px; padding: 14px 20px; font-size: 16px; line-height: 20px; }
+  .continue > img { width: 20px; height: 20px; object-fit: contain; }
+  .skip-button { height: auto; min-height: 44px; padding: 12px 16px; font-size: 16px; line-height: 20px; }
+  .back-button { font-size: 16px; line-height: 20px; gap: 8px; }
+  .back-button img { width: 20px; height: 20px; }
+
+  .needs-content,
+  .rest-content,
+  .reflection-content,
+  .completion-content { gap: 24px; }
+  .chosen-feeling { font-size: 16px; line-height: 20px; gap: 16px; }
+  .chosen-feeling > span { padding: 6px 12px; }
+  .needs-grid { gap: 12px; }
+  .need-card { height: auto; min-height: 236px; padding: 24px 12px 16px; gap: 16px; }
+  .need-copy { padding: 0; gap: 8px; }
+  .need-title { font-size: 18px; line-height: 22px; white-space: normal; }
+  .need-description { font-size: 14px; line-height: 24px; }
+  .need-art,
+  .need-rest .need-art { width: 140px; height: 116px; max-width: 100%; zoom: 1; margin-top: auto; }
+  .need-art img,
+  .need-rest .need-art img { position: static; width: 100%; height: 100%; object-fit: contain; transform: none; }
+  .needs-actions,
+  .rest-actions,
+  .summary-actions { gap: 16px; }
+  .rest-panel { height: auto; padding: 20px 16px 24px; gap: 12px; }
+  .rest-copy { gap: 12px; }
+  .rest-copy h2,
+  .restart-copy h2 { font-size: 24px; line-height: 30px; }
+  .rest-copy p { font-size: 16px; line-height: 20px; }
+  .rest-actions .support { font-size: 14px; line-height: 24px; }
+
+  .reflection-field { gap: 12px; }
+  .reflection-label { font-size: 18px; line-height: 22px; gap: 16px; flex-wrap: wrap; }
+  .reflection-label > span,
+  .reflection-hint,
+  .copy-section > p { font-size: 14px; line-height: 24px; }
+  .reflection-field textarea { height: 120px; min-height: 120px; padding: 16px; font-size: 16px; line-height: 24px; }
+  .reflection-options { gap: 10px; }
+  .reflection-options legend { font-size: 18px; line-height: 22px; margin-bottom: 12px; }
+  .reflection-option { min-height: 48px; padding: 12px 16px; gap: 16px; font-size: 16px; line-height: 24px; }
+  .copy-button { min-height: 44px; padding: 12px 20px; line-height: 20px; }
+
+  .summary-panel { padding: 24px; gap: 20px; }
+  .summary-panel dl { gap: 16px; }
+  .summary-panel dd,
+  .takeaway { font-size: 18px; line-height: 22px; }
+  .summary-actions { font-size: 14px; line-height: 24px; }
+  .summary-note { gap: 8px; }
+  .restart-panel { height: auto; min-height: 0; padding: 0; gap: 16px; }
+  .restart-copy { gap: 12px; }
+  .restart-copy p { font-size: 18px; line-height: 22px; }
+  main,
+  .page:has(.think-screen) main,
+  .page:has(.talk-screen) main { padding-bottom: 40px; }
+  footer { min-height: 56px; }
+  footer > .shell { font-size: 14px; line-height: 24px; }
+}
+
+@media (min-width: 1001px) and (max-width: 1199px) {
+  .check-in-content { padding-inline: 32px; }
+  .welcome { padding-inline: 16px; }
+  .need-card { padding-inline: 8px; }
+}

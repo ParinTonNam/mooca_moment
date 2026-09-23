@@ -1,0 +1,1 @@
+{"name":"mooca-moment","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"vite --host 127.0.0.1","build":"vite build","preview":"vite preview --host 127.0.0.1"},"dependencies":{"react":"^19.1.0","react-dom":"^19.1.0","@fontsource/prompt":"^5.2.0"},"devDependencies":{"vite":"^6.3.0"}}
