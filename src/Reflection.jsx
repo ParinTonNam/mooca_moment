@@ -7,7 +7,7 @@ export default function Reflection({screen,headingRef,onBack,draft,onChange,onSa
  const isThink=screen==='think';
  const [copyStatus,setCopyStatus]=useState('');
  const message=useRef(null);
- const update=patch=>{setCopyStatus('');onChange({...draft,...patch,saved:false});};
+ const update=patch=>{setCopyStatus('');onChange({...draft,...patch});};
  async function copyMessage(){
   try{await navigator.clipboard.writeText(draft.text);setCopyStatus('คัดลอกแล้ว');}
   catch{message.current?.focus();message.current?.select();setCopyStatus('เลือกข้อความแล้ว กดคัดลอกได้เลย');}

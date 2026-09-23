@@ -2,14 +2,13 @@ import {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {feelings} from './Feelings';
 import {starterMessage} from './Reflection';
 
-const emptyThinkDraft = () => ({text:'',choice:null,saved:false});
-const emptyTalkDraft = () => ({text:starterMessage,saved:false});
+const emptyThinkDraft = () => ({text:'',choice:null});
+const emptyTalkDraft = () => ({text:starterMessage});
 
 export default function useJourney() {
   const [selected,setSelected]=useState(null);
   const [screen,setScreen]=useState('feelings');
   const [selectedNeed,setSelectedNeed]=useState(null);
-  const [needConfirmed,setNeedConfirmed]=useState(false);
   const [restCompleted,setRestCompleted]=useState(false);
   const [thinkDraft,setThinkDraft]=useState(emptyThinkDraft);
   const [talkDraft,setTalkDraft]=useState(emptyTalkDraft);
@@ -50,7 +49,6 @@ export default function useJourney() {
   const restart=()=>{
     setSelected(null);
     setSelectedNeed(null);
-    setNeedConfirmed(false);
     setRestCompleted(false);
     setThinkDraft(emptyThinkDraft());
     setTalkDraft(emptyTalkDraft());
@@ -58,11 +56,10 @@ export default function useJourney() {
   };
   const selectFeeling=index=>{
     setSelected(index);
-    setNeedConfirmed(false);
     setRestCompleted(false);
   };
   const continueFromFeelings=()=>{if(selected!==null)navigate('needs');};
-  const selectNeed=id=>{setSelectedNeed(id);setNeedConfirmed(false);};
+  const selectNeed=id=>setSelectedNeed(id);
   const confirmNeed=()=>{
     if(selectedNeed==='rest'){
       setRestCompleted(false);
@@ -79,11 +76,7 @@ export default function useJourney() {
     if(screen==='think')setThinkDraft(draft);
     else setTalkDraft(draft);
   };
-  const saveReflection=()=>{
-    if(screen==='think')setThinkDraft(draft=>({...draft,saved:true}));
-    else setTalkDraft(draft=>({...draft,saved:true}));
-    navigate('summary');
-  };
+  const saveReflection=()=>navigate('summary');
   const backFromSummary=()=>{
     setRestCompleted(false);
     navigate(selectedNeed==='rest'?'observe':selectedNeed);
@@ -94,7 +87,6 @@ export default function useJourney() {
     selected,
     feeling:feelings[selected],
     selectedNeed,
-    needConfirmed,
     restCompleted,
     reflectionDraft:screen==='think'?thinkDraft:talkDraft,
     takeaway:['เริ่มจากสิ่งเล็กที่สุดที่ทำได้','พักก่อน แล้วค่อยกลับมาดู','ขอความช่วยเหลือจากใครสักคน'][thinkDraft.choice],

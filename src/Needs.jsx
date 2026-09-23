@@ -6,7 +6,7 @@ export const needs = [
   {id:'talk',title:'ขอคุยกับใครสักคน',description:'เตรียมคำพูดเล็ก ๆ\nเพื่อเริ่มบทสนทนา',image:'mooca-talk.svg'},
 ];
 
-export default function Needs({feeling,selected,onSelect,onBack,headingRef,confirmed,onConfirm}) {
+export default function Needs({feeling,selected,onSelect,onBack,headingRef,onConfirm}) {
   return <div className="check-in-content needs-content">
     <div className="check-in-heading">
       <div className="needs-topline"><p className="eyebrow">LISTEN TO YOUR NEEDS</p><button type="button" className="back-button" onClick={onBack}><img src="/assets/back-arrow.svg" alt=""/>ย้อนกลับ</button></div>
@@ -20,6 +20,6 @@ export default function Needs({feeling,selected,onSelect,onBack,headingRef,confi
         <span className="need-art"><img src={`/assets/${need.image}`} alt=""/></span>
       </button>)}
     </div>
-    <div className="needs-actions"><p className="support">เลือกได้หนึ่งอย่าง และเปลี่ยนใจได้เสมอ<img src="/assets/imgIconFavoriteRegular.svg" alt=""/></p><button type="button" className="continue" disabled={!selected} aria-pressed={confirmed} onClick={onConfirm}>ให้สิ่งนี้กับตัวเอง<img src={confirmed?'/assets/step-check.svg':'/assets/imgIconArrowSmallRight.svg'} alt=""/></button></div>
+    <div className="needs-actions"><p className="support">เลือกได้หนึ่งอย่าง และเปลี่ยนใจได้เสมอ<img src="/assets/imgIconFavoriteRegular.svg" alt=""/></p><button type="button" className="continue" disabled={!selected} onClick={onConfirm}>ให้สิ่งนี้กับตัวเอง<img src="/assets/imgIconArrowSmallRight.svg" alt=""/></button></div>
   </div>;
 }

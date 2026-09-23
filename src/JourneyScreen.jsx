@@ -56,7 +56,6 @@ export default function JourneyScreen({journey}) {
       onSelect={journey.selectNeed}
       onBack={journey.backToFeelings}
       headingRef={heading}
-      confirmed={journey.needConfirmed}
       onConfirm={journey.confirmNeed}
     />;
   }

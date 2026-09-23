@@ -138,13 +138,6 @@
   flex-direction: column;
   gap: 25px;
 }
-.needs-actions .continue[aria-pressed=true] {
-  background: var(--blue);
-}
-.needs-actions .continue[aria-pressed=true] img {
-  transform: scale(.783);
-  margin: -3.5px;
-}
 @media(min-width:1001px) and (max-width:1750px) {
   .needs-content {
     gap: 42px;

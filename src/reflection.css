@@ -159,10 +159,6 @@
   color: #7c7c7c;
   cursor: not-allowed;
 }
-.reflection-content .continue[aria-pressed=true] img {
-  width: 25px;
-  height: 25px;
-}
 .think-screen .reassurance,.talk-screen .reassurance {
   border-radius: 20px;
 }
