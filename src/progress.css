@@ -1,13 +1,11 @@
 .journey-progress{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;color:var(--text)}
 .journey-progress-label{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px;font-size:16px;line-height:24px}
-.journey-progress-label{animation:progress-label-enter .5s ease-out both}
 .journey-progress-label>span{white-space:nowrap}
 .journey-section{font-weight:500}
 .journey-duration{margin-left:auto;font-weight:300}
 .journey-progress-track{height:4px;border-radius:4px;background:#cde5e2;overflow:hidden}
-.journey-progress-track>span{display:block;height:100%;background:var(--text);border-radius:inherit;transition:width .6s ease-out}
-@keyframes progress-label-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.journey-progress-label{animation:none}.journey-progress-track>span{transition:none}}
+.journey-progress-track>span{display:block;height:100%;width:var(--progress-to);background:var(--text);border-radius:inherit;animation:progress-fill .7s ease-out both}
+@keyframes progress-fill{from{width:var(--progress-from)}to{width:var(--progress-to)}}
 @media(max-width:1000px){.journey-progress{margin-bottom:24px}}
 @media(max-width:767px){
  .journey-progress{gap:10px;margin-bottom:20px}
