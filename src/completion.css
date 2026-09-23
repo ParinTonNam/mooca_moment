@@ -85,9 +85,6 @@
   flex-direction: column;
   gap: 10px;
 }
-.summary-actions>a:hover {
-  text-decoration: underline;
-}
 .restart-panel {
   height: 373px;
   display: flex;

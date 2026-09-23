@@ -103,6 +103,8 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .skip-button:hover {
   background: #f6f6f6;
