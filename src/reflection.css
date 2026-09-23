@@ -9,7 +9,7 @@
 .reflection-label{display:flex;align-items:baseline;gap:40px;font-size:20px;line-height:24px;font-weight:500}
 .reflection-label>span,.reflection-hint,.copy-section>p{font-size:16px;line-height:20px;font-weight:300}
 .reflection-field textarea{display:block;width:100%;height:172px;min-height:172px;resize:vertical;border:1px solid #c4c4c4;border-radius:8px;background:white;padding:29px;font-family:inherit;color:var(--text);font-size:16px;line-height:20px;font-weight:300}
-.reflection-field textarea::placeholder{color:var(--text);opacity:1}
+.reflection-field textarea::placeholder{color:#79ada9;opacity:1}
 .reflection-field textarea:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .reflection-hint{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .reflection-hint>span{flex:none}

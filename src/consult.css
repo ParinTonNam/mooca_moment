@@ -1,0 +1,49 @@
+.consult {
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--brand);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: normal;
+  flex-shrink: 0;
+}
+
+.consult:hover {
+  background: #e0f8f6;
+}
+
+.consult-label-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .consult {
+    padding: 8px 0;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .consult-label-desktop {
+    display: none;
+  }
+
+  .consult-label-mobile {
+    display: inline;
+  }
+}
+
+@media (max-width: 520px) {
+  .consult {
+    max-width: none;
+    padding: 8px 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

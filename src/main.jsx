@@ -19,6 +19,7 @@ import './completion.css';
 import './mobile.css';
 import './progress.css';
 import './desktop.css';
+import './consult.css';
 
 const feelings = [
   {label:'สบายใจ',background:'#e5f3eb',border:'#355956',ellipse:3,face:22},
@@ -50,7 +51,11 @@ function App(){
    const sync=()=>{
      const target=window.location.hash.slice(1);
      if(selected===null){setScreen('feelings');return;}
-     if((target==='rest'||target==='observe') && selectedNeed==='rest'){setScreen(target);return;}
+     if((target==='rest'||target==='observe') && selectedNeed==='rest'){
+       if(target==='observe')setRestCompleted(false);
+       setScreen(target);
+       return;
+     }
      if((target==='think'||target==='talk') && selectedNeed===target){setScreen(target);return;}
      if((target==='summary'||target==='restart') && selectedNeed){setScreen(target);return;}
      setScreen(target==='needs'?'needs':'feelings');
@@ -59,8 +64,14 @@ function App(){
    return ()=>window.removeEventListener('hashchange',sync);
  },[selected,selectedNeed]);
  useLayoutEffect(()=>{
-   heading.current?.focus({preventScroll:true});
-   window.scrollTo({top:0,left:0,behavior:'instant'});
+   const title=heading.current;
+   title?.focus({preventScroll:true});
+   const sectionHeading=title?.closest('.check-in-heading');
+   if(!sectionHeading)return;
+   const bounds=sectionHeading.getBoundingClientRect();
+   if(bounds.top<20||bounds.bottom>window.innerHeight-20){
+     window.scrollTo({top:Math.max(0,window.scrollY+bounds.top-20),left:0,behavior:'instant'});
+   }
  },[screen]);
  const navigate=(next)=>{setScreen(next);window.location.hash=next;};
  const back=()=>navigate('feelings');
@@ -69,7 +80,7 @@ function App(){
 
  const continueCheckIn=()=>{if(selected!==null)navigate('needs');};
  return <div className="page" data-screen={screen}>
-  <header className="header shell"><a className="brand" href="#" aria-label="mooca moment" onClick={reset}><div className="brand-mascot"><Mascot/></div><div className="brand-copy"><div className="wordmark"><strong>mooca</strong><span>moment</span></div><p>ช่วงพักเล็ก ๆ กับ ooca</p></div></a><a className="consult" href="https://ooca.co/" target="_blank" rel="noreferrer">เริ่มปรึกษาได้เลย</a></header>
+  <header className="header shell"><a className="brand" href="#" aria-label="mooca moment" onClick={reset}><div className="brand-mascot"><Mascot/></div><div className="brand-copy"><div className="wordmark"><strong>mooca</strong><span>moment</span></div><p>ช่วงพักเล็ก ๆ กับ ooca</p></div></a><a className="consult" href="https://ooca.co/" target="_blank" rel="noreferrer" aria-label="ดูบริการปรึกษาของ ooca"><span className="consult-label-desktop">ดูบริการปรึกษาของ ooca</span><span className="consult-label-mobile">ดูบริการ ooca</span></a></header>
   <main className="shell">
    <Progress screen={screen}/>
    <section className={`check-in ${screen==='needs'?'needs-screen':isRest?'rest-screen':isReflection?`${screen}-screen`:isCompletion?'completion-screen':''}`}>
