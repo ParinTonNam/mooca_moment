@@ -605,5 +605,8 @@ main {
   border-color: var(--feeling-border);
 }
 .feeling:focus-visible {
-  outline-color: var(--feeling-border);
+  outline: none;
+}
+.feeling:focus-visible::after {
+  border-color: var(--feeling-border);
 }
